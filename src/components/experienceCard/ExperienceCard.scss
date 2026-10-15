@@ -113,13 +113,50 @@
 }
 
 .experience-text-desc {
-  text-align: center;
-  font-weight: 600;
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 34rem;
+  margin: 1.25rem auto 0;
 }
 
 .experience-text-details {
-  padding: 1.5rem;
+  padding: 1.5rem 1.75rem 2rem;
   margin-top: 2rem;
+}
+
+.experience-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem auto 0;
+  max-width: 34rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.experience-bullet {
+  margin: 0;
+  padding: 0.85rem 1rem 0.95rem 1rem;
+  text-align: left;
+  line-height: 1.65;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.035);
+}
+
+.experience-card-dark .experience-bullet {
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.experience-bullet-label {
+  font-weight: 700;
+  color: $textColor;
+}
+
+.experience-bullet-body {
+  color: $subTitle !important;
+  font-size: 0.95rem;
+  font-weight: 400;
 }
 
 /* Media Query */
@@ -156,5 +193,20 @@
   }
   .experience-text-desc {
     font-size: 16px;
+    line-height: 1.55;
+  }
+  .experience-text-details {
+    padding: 1.25rem 1rem 1.5rem;
+  }
+  .experience-bullets {
+    gap: 0.7rem;
+    margin-top: 1.15rem;
+  }
+  .experience-bullet {
+    padding: 0.75rem 0.8rem 0.85rem;
+  }
+  .experience-bullet-body {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 }

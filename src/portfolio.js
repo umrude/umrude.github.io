@@ -187,12 +187,12 @@ const workExperiences = {
       company: "Graph'em Solutions",
       companylogo: require("./assets/images/graphem-G_black-800x800-1.jpg"),
       date: "April 2020 – September 2025",
-      desc: "Built and maintained complex web applications for clients in healthcare, nonprofit, media, and EdTech using Laravel, PHP, Vue.js, React, and Tailwind CSS.",
+      desc: "Built and maintained complex web applications for clients in healthcare, nonprofit, media, and EdTech using various technologies including WordPress, Shopify, Node.js, Laravel, PHP, Vue.js, React, and Tailwind CSS.",
       descBullets: [
-        "WisePub (Laravel, Vue.js): built the real-time chat interface for a webinar streaming platform, with private messaging, user tagging, file uploads, and permission-based roles, plus content management with role-based access and automated publishing workflows.",
+        "WisePub (Laravel, Vue.js): built the real-time chat interface for a webinar streaming platform, with private messaging, user tagging, file uploads, and permission-based roles, plus content management with role-based access.",
         "Stock Scanner (React, Node.js, MongoDB): sole front-end lead and main point of contact for the client. Built a React front end that sorts and visualizes large, frequently updating datasets for a flexible multi-tenant platform, with configurable permissions and client-specific data access.",
-        "Debugged, maintained, and optimized applications to improve performance, reliability, and scalability.",
-        "Delivered RESTful API solutions from initial consultation through deployment and maintenance in an agile environment."
+        "Turned designers' Figma and PSD files into functional, production-ready web applications, working with clients from initial consultation through deployment and maintenance in an agile environment.",
+        "Debugged, maintained, and optimized applications to improve performance, reliability, and scalability."
       ]
     }
   ]
