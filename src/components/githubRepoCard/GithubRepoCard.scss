@@ -3,7 +3,10 @@
 .repo-card-div {
   color: $githubRepoCardColor;
   background-color: $lightBackground2;
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    0 8px 20px -14px rgba(0, 0, 0, 0.45);
   padding: 2rem;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
@@ -11,7 +14,7 @@
   transition: all 0.3s ease;
 }
 .repo-card-div:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.35);
 }
 
 .repo-stats {
@@ -78,8 +81,10 @@
 }
 
 .dark-card-mode {
-  background-color: $darkBackground;
+  background-color: lighten($darkBackground, 7%);
   color: $textColorDark;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: none;
 }
 .dark-card-mode p {
   color: $textColorDark;
@@ -91,5 +96,6 @@
 
 .dark-card-mode:hover {
   background-color: $buttonColor !important;
+  border-color: $buttonColor;
   box-shadow: 0px 0px 16px $darkBoxShadow;
 }
