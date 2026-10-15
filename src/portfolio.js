@@ -85,6 +85,14 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-js"
     },
     {
+      skillName: "tailwindcss",
+      fontAwesomeClassname: "fa-brands fa-tailwind-css"
+    },
+    {
+      skillName: "TypeScript",
+      fontAwesomeClassname: "fa-brands fa-typescript"
+    },
+    {
       skillName: "vuejs",
       fontAwesomeClassname: "fab fa-vuejs"
     },
