@@ -54,7 +54,9 @@ const skillsSection = {
     emoji(
       "⚡ Build interactive front ends in Vue.js and React, backed by Laravel and Node.js APIs"
     ),
-    emoji("⚡ Track down hard-to-find bugs and optimize apps for performance and reliability"),
+    emoji(
+      "⚡ Track down hard-to-find bugs and optimize apps for performance and reliability"
+    ),
     emoji(
       "⚡ Work directly with clients and cross-functional teams, from first consultation through deployment"
     )
@@ -152,7 +154,7 @@ const educationInfo = {
       duration: "September 2019 - December 2019",
       desc: "Intensive web development bootcamp in Vancouver, BC.",
       descBullets: []
-    },
+    }
   ]
 };
 

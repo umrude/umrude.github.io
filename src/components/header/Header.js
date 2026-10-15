@@ -73,8 +73,9 @@ function Header() {
           )}
           {viewResume && (
             <li>
-              <a href={require("./resume.pdf")}
-                    download="Resume.pdf">Resume</a>
+              <a href={require("./resume.pdf")} download="Resume.pdf">
+                Resume
+              </a>
             </li>
           )}
           <li>
