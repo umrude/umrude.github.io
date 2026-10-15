@@ -38,9 +38,7 @@ if (USE_GITHUB_DATA === "true") {
               name
               description
               forkCount
-              stargazers {
-                totalCount
-              }
+              stargazerCount
               url
               id
               diskUsage
@@ -79,10 +77,57 @@ if (USE_GITHUB_DATA === "true") {
       data += d;
     });
     res.on("end", () => {
-      fs.writeFile("./public/profile.json", data, function (err) {
-        if (err) return console.log(err);
-        console.log("saved file to public/profile.json");
+      let profile;
+      try {
+        profile = JSON.parse(data);
+      } catch (error) {
+        console.error(error);
+        process.exit(1);
+      }
+
+      if (profile.errors && profile.errors.length) {
+        console.error(JSON.stringify(profile.errors, null, 2));
+        process.exit(1);
+      }
+
+      const edges =
+        profile.data &&
+        profile.data.user &&
+        profile.data.user.pinnedItems &&
+        profile.data.user.pinnedItems.edges;
+      if (!edges) {
+        console.error(ERR.requestFailed);
+        process.exit(1);
+      }
+
+      edges.forEach(edge => {
+        const node = edge && edge.node;
+        if (!node || typeof node.stargazerCount !== "number") {
+          console.error(ERR.requestFailed);
+          process.exit(1);
+        }
+        const next = {};
+        Object.keys(node).forEach(key => {
+          if (key === "stargazerCount") {
+            next.stargazers = {totalCount: node.stargazerCount};
+          } else {
+            next[key] = node[key];
+          }
+        });
+        edge.node = next;
       });
+
+      fs.writeFile(
+        "./public/profile.json",
+        JSON.stringify(profile),
+        function (err) {
+          if (err) {
+            console.log(err);
+            process.exit(1);
+          }
+          console.log("saved file to public/profile.json");
+        }
+      );
     });
   });
 
