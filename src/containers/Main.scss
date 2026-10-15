@@ -5,3 +5,14 @@
   color: white;
   transition: "0.1s";
 }
+
+/* Illustrations are drawn for a light page. A light stage keeps the navy linework visible. */
+.dark-mode .greeting-image-div > div,
+.dark-mode .skills-image-div > div,
+.dark-mode .contact-image-div > div,
+.dark-mode .skills-image > div {
+  background-color: #eef1f8;
+  border-radius: 1.5rem;
+  padding: 12px;
+  box-sizing: border-box;
+}

@@ -36,7 +36,15 @@
 
 .button-greeting-div {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
   margin-top: 40px;
+}
+
+.button-greeting-div .main-button {
+  margin-right: 0;
+  margin-top: 0;
 }
 .download-link-button {
   text-decoration: none;
@@ -99,9 +107,29 @@
     font-size: 20px;
   }
 }
+@media (max-width: 1024px) {
+  .greeting-main {
+    display: block;
+  }
+  .greeting-text,
+  .greeting-text-p {
+    text-align: center;
+  }
+  .button-greeting-div,
+  .greeting-text-div .social-media-div {
+    justify-content: center;
+    text-align: center;
+  }
+  .greeting-image-div {
+    width: min(100%, 440px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
   }
   .greeting-text {
     font-size: 30px;
@@ -109,14 +137,27 @@
   }
   .greeting-text-p {
     font-size: 16px;
-    line-height: normal;
+    line-height: 1.5;
     text-align: center;
   }
   .greeting-main {
     display: block;
   }
   .greeting-image-div {
-    height: 256px;
+    height: auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .button-greeting-div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .button-greeting-div > *,
+  .button-greeting-div .main-button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
   }
 }
 

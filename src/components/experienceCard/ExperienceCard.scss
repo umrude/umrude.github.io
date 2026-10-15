@@ -142,6 +142,9 @@
 }
 
 @media (max-width: 768px) {
+  .experience-text-company {
+    white-space: normal;
+  }
   .experience-text-role {
     font-size: 22px;
   }

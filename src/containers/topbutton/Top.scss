@@ -20,3 +20,12 @@
   background-color: $topButtonHover;
   transition: all ease-in-out 0.2s;
 }
+
+@media (max-width: 768px) {
+  #topButton {
+    right: 16px;
+    bottom: 16px;
+    padding: 12px;
+    font-size: 20px;
+  }
+}

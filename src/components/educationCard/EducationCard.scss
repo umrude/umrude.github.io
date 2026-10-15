@@ -112,7 +112,13 @@
 
 @media (max-width: 768px) {
   .education-card {
+    align-items: center;
     text-align: center;
+  }
+  .education-text-school {
+    white-space: normal;
+    height: auto;
+    overflow: visible;
   }
   .education-card-right {
     max-width: 100%;
