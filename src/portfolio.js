@@ -26,7 +26,7 @@ const greeting = {
     "A full-stack web developer 🚀 with 5+ years of experience building complex web applications with Vue.js, React, and Laravel."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ls_87oAExySmGhTHTJfReGCIGxHkLrle/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/uc?export=download&id=1ls_87oAExySmGhTHTJfReGCIGxHkLrle", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
